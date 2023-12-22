@@ -1,0 +1,43 @@
+.paginator {
+    margin: 30px auto;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: white;
+    width: max-content;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pageNumber {
+    margin: 0 2px;
+    padding: 2px;
+    cursor: pointer;
+    color: black;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.selectedPage {
+    color: black;
+    opacity: 1;
+}
+
+.btn {
+    width: 80px;
+    cursor: pointer;
+    margin: 0 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+}
+
+@media (max-width: 480px) {
+    .pageNumber {
+        font-size: 14px;
+    }
+}

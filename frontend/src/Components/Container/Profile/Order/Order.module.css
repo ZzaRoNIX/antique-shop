@@ -1,0 +1,128 @@
+.order {
+    font-family: Georgia sans-serif;
+    margin-bottom: 40px;
+    border: 1px solid #979797;
+    padding: 20px 20px 0;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid #979797;
+}
+
+.processing {
+    color: #FFA305;
+}
+
+.cancel {
+    color: #e31b1b;
+}
+
+.done {
+    color: #068318;
+}
+
+.items {
+    padding: 20px 15px 0;
+    border-bottom: 1px solid #979797;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.price {
+    padding: 20px 15px;
+    border-bottom: 1px solid #979797;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPrice {
+    font-size: 20px;
+    font-family: 'Alegreya SC', serif;
+    color: #646050;
+    font-weight: bold;
+}
+
+.typePrice {
+    font-family: 'Alegreya SC', serif;
+    color: #646050;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.saleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.sale {
+    font-size: 14px;
+    opacity: 0.6;
+    text-decoration: line-through;
+    margin-left: 15px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.descriptionTitle {
+    margin-bottom: 10px;
+}
+
+.descriptionContainer {
+    padding: 20px 0;
+    font-size: 20px;
+    border-bottom: 1px solid #979797;
+}
+
+.description {
+    opacity: 0.7;
+    white-space: pre-wrap;
+}
+
+.delivery {
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+@media (max-width: 649px) {
+    .items {
+        padding: 20px 0 0;
+    }
+    .top {
+        font-size: 18px;
+    }
+    .item, .totalPrice, .descriptionContainer, .delivery {
+        font-size: 16px;
+    }
+}
+@media (max-width: 479px) {
+    .order {
+        padding: 10px;
+    }
+    .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .totalPrice {
+        margin-left: 0;
+    }
+    .item, .totalPrice, .descriptionContainer, .delivery, .top {
+        font-size: 14px;
+    }
+    .delivery {
+        padding: 20px 0 0;
+    }
+}

@@ -1,0 +1,18 @@
+.button {
+    text-transform: uppercase;
+    background-color: #ae9256;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    width: 320px;
+    text-align: center;
+    padding: 15px 0;
+    margin: 45px auto 20px;
+    font-family: Georgia sans-serif;
+}
+
+@media (max-width: 479px) {
+    .button {
+        width: 100%;
+    }
+}

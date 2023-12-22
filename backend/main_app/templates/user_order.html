@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+<div style="font-family: Georgia sans-serif;margin-bottom: 40px;border: 1px solid #979797;padding: 20px 20px 0;border-radius: 2px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);">
+    <div style="display: flex;justify-content: space-between;padding-bottom: 20px;font-size: 22px;border-bottom: 1px solid #979797;">
+        <div>Уважаемый {{ last_name }} {{ first_name }} {{ middle_name }}, номер Вашего заказа: #{{ order.id }}</div>
+    </div>
+
+    {% for product in products %}
+        <div style="padding: 20px 15px 0;border-bottom: 1px solid #979797;">
+            <div style="font-size: 20px;margin-bottom: 20px;align-items: center;">
+                <div>Наименование товара: {{ product.name }}</div>
+                <div></div>
+                {% if product.is_contract_price %}
+                    <div style="margin-bottom: 20px">Стоимость товара: <span
+                            style="font-size: 20px;font-family: 'Alegreya SC', serif;color: #646050;font-weight: bold; margin-top: 40px">Договорная</span>
+                    </div>
+                {% elif product.sale_price != 0 and product.sale_price %}
+                    <div style="margin-bottom: 20px">Стоимость товара: <span
+                            style="font-size: 20px;font-family: 'Alegreya SC', serif;color: #646050;font-weight: bold; margin-top: 40px">{{ product.sale_price }}</span>
+                    </div>
+                {% else %}
+                    <div style="margin-bottom: 20px">Стоимость товара: <span
+                            style="font-size: 20px;font-family: 'Alegreya SC', serif;color: #646050;font-weight: bold; margin-top: 40px">{{ product.price }}</span>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div style="padding: 20px 0;font-size: 20px;border-bottom: 1px solid #979797;">
+        <div style="margin-bottom: 10px;">Комментарий к заказу: {{ order.description }}</div>
+        <div style="opacity: 0.7;white-space: pre-wrap;"></div>
+    </div>
+    <div style="padding: 20px 0;font-size: 20px;">Способ доставки: {{ order.delivery_type }}</div>
+    <div style="font-size: 20px;">Ваша почта, указанная при создании заказа: {{ user_email }}</div>
+    <div style="font-size: 20px;">Ваш номер телефона, указанный при создании заказа: {{ user_phone_number }}</div>
+    <div style="font-size: 20px;">Почта администратора (доступна круглосуточно): {{ admin_email }}</div>
+    <div style="font-size: 20px;">Телефон администратора (доступен в рабочее время): {{ admin_phone_number }}</div>
+</div>
+</body>
+
+</html>

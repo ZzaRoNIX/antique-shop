@@ -1,0 +1,90 @@
+.data {
+    padding-top: 25px;
+    font-family: Georgia sans-serif;
+}
+.form {
+    margin-top: 15px;
+    padding-bottom: 30px;
+    /*border-bottom: 2px solid #ccc;*/
+}
+
+.formItem {
+    font-family: Georgia sans-serif;
+    margin-bottom: 15px;
+}
+.formSubmit {
+    font-family: Georgia sans-serif;
+    margin-bottom: 110px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.field {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.formItem textarea {
+    font-family: Georgia sans-serif;
+    display: block;
+    padding: 7px 15px;
+    width: 100%;
+    font-size: 18px;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 250px;
+}
+.formItem textarea::placeholder {
+    color: #aaa;
+    font-size: 18px;
+    font-family: Georgia sans-serif;
+}
+
+.submit {
+    font-family: Georgia sans-serif;
+    display: block;
+    width: max-content;
+    padding: 9px 50px;
+    background-color: #92815c;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: white;
+    border-radius: 2px;
+    font-size: 18px;
+    border: none;
+}
+
+.toCenter {
+    margin: 20px auto;
+}
+
+.submit:hover {
+    background-color: #685D45;
+}
+
+.select {
+    width: 220px;
+    border-radius: 2px;
+}
+
+@media (max-width: 479px) {
+    .formSubmit {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    .select {
+        margin-bottom: 140px;
+    }
+    .field {
+        font-size: 18px;
+    }
+    .formItem textarea, .formItem textarea::placeholder {
+        font-size: 16px;
+    }
+    .submit {
+        margin: 0 auto;
+    }
+}
+

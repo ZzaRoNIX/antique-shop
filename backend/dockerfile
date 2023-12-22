@@ -1,0 +1,23 @@
+FROM python:3.8.5-alpine
+
+RUN mkdir /opt/app
+WORKDIR /opt/app
+
+COPY requirements.txt .
+COPY manage.py .
+COPY main_app/ ./main_app/
+COPY project/ ./project/
+COPY media/ ./media/
+COPY db.sqlite3 .
+COPY frontend/build ./frontend/build/
+RUN python3 -m pip install --upgrade pip
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add postgresql \
+    && apk add postgresql-dev \
+    && pip install psycopg2 \
+    && apk add jpeg-dev zlib-dev libjpeg
+RUN pip install -r requirements.txt
+RUN apk del build-deps
+RUN pip install gunicorn
+RUN python3 manage.py collectstatic --no-input

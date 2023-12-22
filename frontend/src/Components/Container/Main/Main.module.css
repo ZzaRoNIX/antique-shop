@@ -1,0 +1,91 @@
+.main {
+}
+
+.title {
+    font-family: Georgia sans-serif;
+    font-size: 40px;
+    margin: 25px 0 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
+.description {
+    line-height: 2.4;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.advantageTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.button {
+    font-family: Georgia sans-serif;
+    width: max-content;
+    margin: 0 auto 40px;
+    display: block;
+    color: white;
+    padding: 10px 40px;
+    background-color: #92815c;
+    transition: all 0.4s ease;
+}
+
+.button:hover {
+    background-color: #685D45;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .description {
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .description {
+        font-size: 14px;
+    }
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    .description {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .advantageTitle {
+        font-size: 20px;
+    }
+}
+@media (min-width: 480px) and (max-width: 649px) {
+    .description {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .advantageTitle {
+        font-size: 20px;
+    }
+}
+@media (max-width: 479px) {
+    .description {
+        font-size: 12px;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .advantageTitle {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,135 @@
+.footer {
+    padding: 40px 10px 10px;
+    background-color: #4c4a4b;
+    color: white;
+    font-family: Georgia sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.name {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.name::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.name::after {
+    margin-left: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a{
+    color: white;
+    margin-right: 100px;
+    transition: all 0.4s ease;
+}
+
+.nav a:hover {
+    opacity: 0.5;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.social div {
+    margin-right: 10px;
+}
+
+.devgang {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 15px auto 0;
+    width: 100%;
+    color: #ccc;
+    text-align: right;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .nav a{
+        margin-right: 50px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav a{
+        margin-right: 30px;
+    }
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    .nav a{
+        margin-right: 20px;
+        font-size: 14px;
+    }
+    .social div {
+        font-size: 14px;
+    }
+}
+@media (min-width: 480px) and (max-width: 649px) {
+    .footer {
+        padding: 20px 10px 10px;
+    }
+    .nav a{
+        margin-right: 20px;
+        font-size: 14px;
+    }
+    .nav {
+        margin-bottom: 20px;
+    }
+    .social div {
+        font-size: 14px;
+    }
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (max-width: 479px) {
+    .footer {
+        padding: 20px 10px 10px;
+    }
+    .nav a{
+        margin-right: 10px;
+        font-size: 10px;
+    }
+    .nav {
+        margin-bottom: 20px;
+    }
+    .social div {
+        font-size: 10px;
+    }
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .devgang {
+        font-size: 10px;
+    }
+}

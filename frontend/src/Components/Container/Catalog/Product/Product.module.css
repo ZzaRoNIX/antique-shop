@@ -1,0 +1,156 @@
+.product {
+    width: 100%;
+    display: flex;
+}
+
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.photo img {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.info {
+    margin-left: 20px;
+    width: 60%;
+}
+
+.basic {
+    padding-bottom: 20px;
+}
+
+.name {
+    font-family: Georgia sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.saleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    color: #646050;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.sale {
+    font-family: 'Alegreya SC', serif;
+    opacity: 0.6;
+    margin: 0 40px 0 20px;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.saleButton {
+    font-family: Georgia sans-serif;
+    font-size: 12px;
+    width: max-content;
+    padding: 7px 30px;
+    border-radius: 2px;
+    background-color: #646050;
+    color: white;
+    text-transform: uppercase;
+}
+
+.type {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+}
+
+.typePrice {
+    /*padding: 0 0 20px;*/
+}
+
+.description {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.descriptionTitle {
+    font-family: Georgia sans-serif;
+    font-size: 18px;
+}
+
+.text {
+    margin-top: 15px;
+    opacity: 0.6;
+    white-space: pre-wrap;
+}
+
+.buttons {
+    padding: 20px 0;
+}
+
+.noCart, .inCart, .buttons a {
+    border: none;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 2px;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+}
+
+.buttons .noCart, .buttons a {
+    color: white;
+    background-color: #92815c;
+}
+
+.inCart {
+    color: black;
+    background-color: #ccc;
+}
+
+.noCart:hover, .buttons a:hover {
+    background-color: #685D45;
+}
+.inCart:hover {
+    background-color: #aaa;
+}
+
+@media (min-width: 650px) and (max-width: 991px) {
+    .product {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .info {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 649px) {
+    .product {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .info {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .noCart, .inCart, .buttons a {
+        text-align: center;
+        display: block;
+        margin-right: 0;
+    }
+    .buttons a {
+        margin-top: 15px;
+    }
+
+}

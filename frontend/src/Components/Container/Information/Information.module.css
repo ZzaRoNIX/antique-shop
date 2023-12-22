@@ -1,0 +1,19 @@
+.information {
+    padding: 5px 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.text {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1440px) {
+    .information {
+        padding: 5px 10px;
+    }
+}

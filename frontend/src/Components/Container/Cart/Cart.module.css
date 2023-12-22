@@ -1,0 +1,97 @@
+.cart {
+    margin-top: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.top a {
+    font-family: Georgia sans-serif;
+    font-size: 16px;
+    display: block;
+    background-color: #92815c;
+    padding: 10px 0;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+    transition: all 0.4s ease;
+    border-radius: 2px;
+}
+.top a:hover {
+    background-color: #685D45;
+}
+
+.registration {
+    font-family: Georgia sans-serif;
+    border-radius: 2px;
+    color: white;
+    width: 79%;
+    padding: 10px 20px;
+    background-color: #646050;
+}
+
+.itemsContainer {
+
+}
+
+.empty {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.totalPrice {
+    padding: 15px 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+}
+
+.full {
+    font-family: Georgia sans-serif;
+    font-size: 20px;
+}
+
+.price {
+    color: #646050;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alegreya SC', serif;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .top a {
+        width: 33%;
+    }
+    .registration {
+        width: 66%;
+    }
+}
+@media (max-width: 649px) {
+    .top a, .registration {
+        font-size: 14px;
+    }
+}
+@media (max-width: 479px) {
+    .top {
+        flex-direction: column;
+    }
+    .top a {
+        margin-left: 0;
+        width: 100%;
+    }
+    .registration {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+}

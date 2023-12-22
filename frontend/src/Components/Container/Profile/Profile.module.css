@@ -1,0 +1,150 @@
+.top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 'catalog profile change exit';
+    grid-gap: 20px;
+    margin-top: 20px;
+    font-family: Georgia sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.backBtn {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ae9256;
+    color: white;
+    border-radius: 2px;
+}
+
+.toCatalog {
+    grid-area: catalog;
+}
+.menu {
+    grid-area: profile;
+}
+.changeProfile {
+    grid-area: change;
+}
+.logout {
+    grid-area: exit;
+}
+
+.title {
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: #646050;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    font-family: Georgia sans-serif;
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+
+.profile div {
+    margin-right: 60px;
+}
+
+.profile div:last-child {
+    margin-right: 0;
+}
+
+.text {
+    font-family: Georgia sans-serif;
+    margin-bottom: 10px;
+}
+
+.input {
+    font-family: Georgia sans-serif;
+    height: 40px;
+    width: 220px;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.noOrders {
+    width: max-content;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: Georgia sans-serif;
+    opacity: 0.7;
+}
+
+.changePass {
+    padding: 10px 20px;
+    background-color: #92815c;
+    color: white;
+    transition: all 0.4s ease;
+    border-radius: 2px;
+    width: max-content;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .profile div {
+        margin-right: 10px;
+    }
+    .backBtn {
+        padding: 10px 0;
+    }
+    .top {
+        grid-template-columns: 2fr 3fr 2fr 2fr;
+    }
+}
+@media (max-width: 991px) {
+    .backBtn {
+        padding: 10px 0;
+    }
+    .title {
+        text-align: center;
+    }
+    .profile {
+        flex-direction: column;
+    }
+    .profile div{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+@media (min-width: 650px) and (max-width: 991px) {
+    .top {
+        grid-template-columns: 2fr 5fr;
+        grid-template-areas:
+            'catalog profile'
+            'exit change'
+    ;
+        grid-gap: 10px;
+    }
+}
+@media (max-width: 649px) {
+
+    .top {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'catalog profile'
+            'exit change'
+    ;
+        grid-gap: 10px;
+    }
+}
+@media (max-width: 479px) {
+    .backBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile div {
+        font-size: 16px;
+    }
+    .top {
+        font-size: 14px;
+    }
+}

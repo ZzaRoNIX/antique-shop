@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  django_gunicorn:
+    volumes:
+      - static:/opt/app/static
+      - media:/opt/app/media
+    build:
+      context: .
+    command: gunicorn --bind 0.0.0.0:8080 project.wsgi
+    expose:
+      - 8080
+  nginx:
+    build: ./nginx
+    command: nginx -g 'daemon off;'
+    volumes:
+      - static:/opt/app/static
+      - media:/opt/app/media
+    ports:
+      - "8000:80"
+    depends_on:
+      - django_gunicorn
+
+volumes:
+  static:
+  media:

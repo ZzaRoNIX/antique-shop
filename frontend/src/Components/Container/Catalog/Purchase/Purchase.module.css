@@ -1,0 +1,161 @@
+.purchase {
+    margin-top: 20px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.top a {
+    font-family: Georgia sans-serif;
+    font-size: 16px;
+    display: block;
+    background-color: #92815c;
+    padding: 10px 0;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+    transition: all 0.4s ease;
+    border-radius: 2px;
+}
+.top a:hover {
+    background-color: #685D45;
+}
+
+.registration {
+    font-family: Georgia sans-serif;
+    border-radius: 2px;
+    color: white;
+    width: 79%;
+    padding: 10px 20px;
+    background-color: #646050;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.photoContainer {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoContainer img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.info {
+    width: 79%;
+    padding: 25px 0;
+}
+
+.name {
+    font-family: Georgia sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #646050;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.saleContainer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sale {
+    font-size: 14px;
+    opacity: 0.6;
+    text-decoration: line-through;
+    margin-left: 15px;
+    font-family: 'Alegreya SC', serif;
+}
+
+.type {
+    margin-top: 15px;
+}
+
+.typePrice {
+    margin-top: 15px;
+}
+
+.description {
+    font-weight: 500;
+}
+
+.descriptionTitle {
+    font-family: Georgia sans-serif;
+    font-size: 18px;
+}
+
+.text {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    white-space: pre-wrap;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+@media (min-width: 480px) and (max-width: 991px) {
+    .name {
+        font-size: 24px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+    .top a,.photoContainer {
+        width: 33%;
+    }
+    .registration, .info {
+        width: 66%;
+    }
+}
+@media (max-width: 649px) {
+    .top a, .registration {
+        font-size: 14px;
+    }
+    .photoContainer {
+        width: 50%;
+    }
+    .info {
+        width: 50%;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 479px) {
+    .top, .product {
+        flex-direction: column;
+    }
+    .top a, .photoContainer, .info {
+        margin-left: 0;
+        width: 100%;
+    }
+    .registration {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+}
+

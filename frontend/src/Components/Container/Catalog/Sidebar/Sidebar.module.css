@@ -1,0 +1,28 @@
+.sidebar {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+}
+
+.top {
+    padding: 10px 20px;
+    background-color: #646050;
+    color: white;
+    margin-bottom: 20px;
+    font-family: Georgia sans-serif;
+}
+
+.catalogListContainer {
+    padding: 0 20px;
+}
+
+.catalogListItem {
+    display: block;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.active {
+    font-weight: bold;
+}
