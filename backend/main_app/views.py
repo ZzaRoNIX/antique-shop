@@ -86,18 +86,18 @@ class NewOrderView(APIView):
                 'Заказ на сайте ArtWorldShop',
                 msg_plain,
                 DEFAULT_FROM_EMAIL,
-                [request.user.email, DEFAULT_DEV_EMAIL],
+                [request.user.email],
                 html_message=msg_html,
             )
 
-            msg_html = render_to_string('admin_order.html', data)
-            send_mail(
-                'Новый заказ на сайте ArtWorldShop',
-                msg_plain,
-                DEFAULT_FROM_EMAIL,
-                [DEFAULT_ADMIN_EMAIL, DEFAULT_DEV_EMAIL],
-                html_message=msg_html,
-            )
+            # msg_html = render_to_string('admin_order.html', data)
+            # send_mail(
+            #     'Новый заказ на сайте ArtWorldShop',
+            #     msg_plain,
+            #     DEFAULT_FROM_EMAIL,
+            #     [DEFAULT_ADMIN_EMAIL, DEFAULT_DEV_EMAIL],
+            #     html_message=msg_html,
+            # )
 
             return Response(True)
         except BadHeaderError:

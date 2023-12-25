@@ -182,8 +182,8 @@ EMAIL_HOST_USER = 'support@artworldshop.ru'
 EMAIL_HOST_PASSWORD = "ihqjtmgegnoqmhfi"
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'support@artworldshop.ru'
-DEFAULT_ADMIN_EMAIL = 'Office@media-sochi.ru'
+DEFAULT_ADMIN_EMAIL = ''
 DEFAULT_DEV_EMAIL = 'alexgeniusman@gmail.com'
-DEFAULT_ADMIN_PHONE_NUMBER = '8 (862) 295-95-94'
+DEFAULT_ADMIN_PHONE_NUMBER = ''
 
 AUTH_USER_MODEL = 'main_app.User'
